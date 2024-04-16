@@ -1,4 +1,17 @@
+# OS generated files
 .DS_Store
 ._.DS_Store
 **/.DS_Store
 **/._.DS_Store
+
+# Node generated files
+node_modules
+**/node_modules
+
+# Test codes
+tests
+**/tests
+
+# env files
+**.env
+
