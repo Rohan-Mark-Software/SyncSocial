@@ -7,7 +7,7 @@ WORKDIR /app
 COPY package.json ./
 COPY package-lock.json ./
 
-RUN node install
+RUN npm install
 
 COPY ./src ./src
 

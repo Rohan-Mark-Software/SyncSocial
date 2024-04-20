@@ -1,0 +1,8 @@
+/route:
+    get:
+        description: Description of your endpoint
+        tags:
+            - route
+        responses:
+            200:
+                description: Successful response

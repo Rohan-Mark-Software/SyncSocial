@@ -9,9 +9,13 @@ node_modules
 **/node_modules
 
 # Test codes
-tests
-**/tests
+# tests
+# **/tests
 
 # env files
-**.env
+*.env
+.env.*
+**/*.env
+**/.env.*
 
+nodemon.json
