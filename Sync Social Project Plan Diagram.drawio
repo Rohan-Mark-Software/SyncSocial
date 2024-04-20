@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-04-20T14:30:27.412Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" etag="Xo6-q5dU80IOza7u3LjS" version="24.2.3" type="github">
+<mxfile host="app.diagrams.net" modified="2024-04-20T14:37:25.256Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" etag="PAtj1Udf81A3o0VdSBjP" version="24.2.3" type="github">
   <diagram name="Page-1" id="KQyJUj6T9spf_OoM_0_H">
-    <mxGraphModel dx="1453" dy="2687" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1271" dy="2539" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -85,7 +85,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="dcAHE2OHVMGTnJU_Sqqw-29" value="Rules" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=0;strokeColor=default;fontSize=16;rounded=1;shadow=0;glass=0;align=center;verticalAlign=middle;fontFamily=Helvetica;fontColor=default;fillColor=default;" parent="1" vertex="1">
-          <mxGeometry x="-240" y="200" width="500" height="590.0000000000001" as="geometry" />
+          <mxGeometry x="-240" y="200" width="500" height="630" as="geometry" />
         </mxCell>
         <mxCell id="dcAHE2OHVMGTnJU_Sqqw-30" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=16;rounded=1;shadow=0;glass=0;align=center;verticalAlign=middle;fontFamily=Helvetica;fontColor=default;fontStyle=0;" parent="dcAHE2OHVMGTnJU_Sqqw-29" vertex="1">
           <mxGeometry y="30" width="500" height="30" as="geometry" />
@@ -215,6 +215,19 @@
         <mxCell id="D9Aitf7e7fqlFALz22u8-329" value="In order to upload our app on App Store and Google Play,&amp;nbsp;&lt;br&gt;App Store - $99 per year - max 3 weeks&lt;div&gt;Google Play - $25 one time pay - max 1 week&lt;/div&gt;&lt;div&gt;so we have to discuss whether each of us is going to take one of platform and manage the app or start with only one of platforms&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=16;rounded=1;shadow=0;glass=0;verticalAlign=middle;fontFamily=Helvetica;fontColor=default;fontStyle=0;" parent="D9Aitf7e7fqlFALz22u8-327" vertex="1">
           <mxGeometry x="43" width="457" height="150" as="geometry">
             <mxRectangle width="457" height="150" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4MJx2Vs91VDLspmxLlTx-1" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=16;rounded=1;shadow=0;glass=0;align=center;verticalAlign=middle;fontFamily=Helvetica;fontColor=default;fontStyle=0;" vertex="1" parent="dcAHE2OHVMGTnJU_Sqqw-29">
+          <mxGeometry y="590" width="500" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="4MJx2Vs91VDLspmxLlTx-2" value="11" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;strokeColor=inherit;fontSize=16;rounded=1;shadow=0;glass=0;align=center;verticalAlign=middle;fontFamily=Helvetica;fontColor=default;fontStyle=0;" vertex="1" parent="4MJx2Vs91VDLspmxLlTx-1">
+          <mxGeometry width="43" height="40" as="geometry">
+            <mxRectangle width="43" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4MJx2Vs91VDLspmxLlTx-3" value="we probably finish server and start frontend app&amp;nbsp;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=16;rounded=1;shadow=0;glass=0;verticalAlign=middle;fontFamily=Helvetica;fontColor=default;fontStyle=0;" vertex="1" parent="4MJx2Vs91VDLspmxLlTx-1">
+          <mxGeometry x="43" width="457" height="40" as="geometry">
+            <mxRectangle width="457" height="40" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="dcAHE2OHVMGTnJU_Sqqw-39" value="" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=middle;shape=mxgraph.arrows2.stylisedArrow;dy=0.6;dx=40;notch=15;feather=0.4;rounded=1;glass=0;strokeColor=#C73500;fontFamily=Helvetica;fontSize=12;fontStyle=0;fillColor=#fa6800;rotation=-180;fontColor=#000000;" parent="1" vertex="1">
