@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebSocket Chat</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      #chat {
+        width: 100%;
+        height: 400px;
+        border: 1px solid #ccc;
+        overflow-y: scroll;
+        padding: 10px;
+      }
+      #message {
+        width: 70%;
+        padding: 10px;
+      }
+      #send {
+        width: 15%;
+        padding: 10px;
+      }
+      #room {
+        width: 70%;
+        padding: 10px;
+      }
+      #join {
+        width: 15%;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>WebSocket Chat</h1>
+    <input type="text" id="room" placeholder="Enter room name..." />
+    <button id="join">Join Room</button>
+    <div id="chat"></div>
+    <input type="text" id="message" placeholder="Type a message..." />
+    <button id="send">Send</button>
+    <button id="who">who</button>
+
+    <script
+      src="https://cdn.socket.io/4.7.5/socket.io.min.js"
+      integrity="sha384-2huaZvOR9iDzHqslqwpR87isEmrfxqyWOF7hr7BY6KG0+hVKLoEXMPUJw3ynWuhO"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      const chat = document.getElementById('chat');
+      const messageInput = document.getElementById('message');
+      const sendButton = document.getElementById('send');
+      const roomInput = document.getElementById('room');
+      const joinButton = document.getElementById('join');
+      const checkButton = document.getElementById('who');
+
+      const socket = io('ws://localhost:3001/', {
+        query: {
+          token:
+            'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImI5MGYzYWJhLWU5NzctNDZhMy1hNzQ2LWU1NWIwNzQ4ZjVlNiIsInVzZXJuYW1lIjoiTWFya05hbTIwMTEiLCJ0b2tlblZlcnNpb24iOjAsInR5cGUiOiJhY2Nlc3MiLCJlbWFpbENvbmZpcm1lZCI6ZmFsc2UsImlhdCI6MTcxNzg0NTY2MiwiZXhwIjoxNzE3ODQ5MjYyfQ.X9Ix7AqMjbtGb8eLgU6BfJJLRheDYaeLFJHrmqmXSQs',
+        },
+      }); // Update the URL to match your WebSocket server
+
+      let currentRoom = '';
+
+      socket.on('connect', () => {
+        chat.innerHTML += '<div>Connected to the server</div>';
+      });
+
+      socket.on('message', (message) => {
+        console.log(message);
+        chat.innerHTML += `<div>${message.content}</div>`;
+        chat.scrollTop = chat.scrollHeight;
+      });
+
+      socket.on('error', (data) => {
+        chat.innerHTML += `<div>${data}</div>`;
+      });
+
+      socket.on('disconnect', () => {
+        chat.innerHTML += '<div>Disconnected from the server</div>';
+      });
+
+      socket.on('onlineUsers', (data) => {
+        console.log(data);
+      });
+
+      socket.on('joinedRoom', (message) => {
+        console.log(message);
+      });
+
+      sendButton.onclick = () => {
+        const message = messageInput.value;
+        if (message && currentRoom) {
+          socket.emit('message', {
+            roomId: currentRoom,
+            content: message,
+          });
+          messageInput.value = '';
+        }
+      };
+
+      messageInput.addEventListener('keyup', (event) => {
+        if (event.key === 'Enter') {
+          sendButton.click();
+        }
+      });
+
+      joinButton.onclick = () => {
+        const room = roomInput.value;
+        if (room) {
+          socket.emit('leaveRoom', { id: currentRoom });
+          currentRoom = room;
+          socket.emit('joinRoom', { id: room });
+          console.log(room);
+          chat.innerHTML = `<div>Joined room: ${room}</div>`;
+        }
+      };
+
+      checkButton.onclick = () => {
+        socket.emit('whoIsOnline', currentRoom);
+      };
+
+      roomInput.addEventListener('keyup', (event) => {
+        if (event.key === 'Enter') {
+          joinButton.click();
+        }
+      });
+    </script>
+  </body>
+</html>

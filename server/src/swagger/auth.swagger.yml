@@ -1,9 +1,0 @@
-/auth:
-    get:
-        summary: Get auth
-        description: Get auth
-        tags:
-            - auth
-        responses:
-            200:
-                description: Successful response
